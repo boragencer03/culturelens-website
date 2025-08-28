@@ -3,236 +3,207 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>What Cartoons Teach Our Children – Niloya vs. Wylde Pak</title>
-  <meta name="description" content="Parent-friendly guide comparing cultural dynamics and family stereotypes in Niloya and Wylde Pak." />
+  <title>CultureLens – Niloya vs. Wylde Pak</title>
+  <meta name="description" content="Comparing cultural dynamics and family stereotypes in Niloya and Wylde Pak." />
   <style>
     :root{
       --bg:#0b132b; --card:#1c2541; --muted:#3a506b; --accent:#5bc0be; --text:#f5f7fa; --sub:#d6e0ea; --warn:#f7b267;
       --radius:18px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b132b 0%, #172039 100%);color:var(--text);}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b132b;color:var(--text);margin:0}
     a{color:var(--accent);text-decoration:none}
-    a:focus{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(11,19,43,.75);border-bottom:1px solid rgba(255,255,255,.07)}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,19,43,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;gap:10px;align-items:center}
     .brand .logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#9be5e3);display:grid;place-items:center;color:#0b132b;font-weight:800}
-    .brand span{font-weight:700;letter-spacing:.3px}
+    .brand span{font-weight:700}
     .links{display:flex;gap:14px;flex-wrap:wrap}
     .links a{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05)}
     .links a:hover{background:rgba(91,192,190,.2)}
     main{padding:30px 0 70px}
-
-    /* hero */
-    .hero{display:grid;gap:22px;grid-template-columns:1.2fr .8fr;align-items:center;margin-top:14px}
-    .hero h1{font-size:clamp(28px,3.2vw,44px);line-height:1.1;margin:0}
-    .tag{display:inline-block;margin-top:8px;padding:6px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.05);color:var(--sub);font-size:14px}
-    .card{background:linear-gradient(180deg,rgba(28,37,65,.75),rgba(28,37,65,.45));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
-    .card h3{margin:0 0 10px}
-    .grid-3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-    .muted{color:var(--sub)}
-
-    /* sections */
     section{margin-top:46px}
     section h2{font-size:clamp(22px,2.2vw,30px)}
-
-    /* comparison */
-    .compare{overflow:auto;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
-    table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(28,37,65,.55)}
-    thead th{position:sticky;top:0;background:rgba(28,37,65,.9);backdrop-filter:blur(6px);}
-    th,td{padding:16px 14px;vertical-align:top}
-    th{font-size:15px;text-transform:uppercase;letter-spacing:.6px;color:var(--sub)}
-    tbody tr:not(:last-child) td{border-bottom:1px solid rgba(255,255,255,.06)}
-    tbody td:first-child{color:var(--sub);width:26%}
-    tbody td:nth-child(2){background:linear-gradient(180deg,rgba(91,192,190,.1),rgba(91,192,190,.06))}
-    tbody td:nth-child(3){background:linear-gradient(180deg,rgba(247,178,103,.12),rgba(247,178,103,.06))}
-
-    /* tips */
-    .tips{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
-    .tip{padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(28,37,65,.55)}
-    .tip h4{margin:0 0 8px}
-
-    /* footer */
+    .card{background:rgba(28,37,65,.6);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;margin-top:14px}
+    .muted{color:var(--sub)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:14px;border:1px solid rgba(255,255,255,.1);vertical-align:top}
+    th{background:rgba(28,37,65,.8)}
     footer{padding:28px 0;color:var(--sub);border-top:1px dashed rgba(255,255,255,.1)}
-
-    /* responsive */
-    @media (max-width:960px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .tips{grid-template-columns:1fr}
-      .links{gap:8px}
-    }
+    .img-block{margin:14px 0;text-align:center}
+    .img-block img{max-width:100%;border-radius:var(--radius);margin-bottom:10px}
+    .hero{padding:80px 20px;text-align:center;background:linear-gradient(rgba(11,19,43,.7),rgba(11,19,43,.7)),url('images/hero.jpg') center/cover no-repeat;border-radius:var(--radius)}
+    .hero h1{font-size:clamp(32px,4vw,48px);margin:0;color:var(--text)}
+    .hero p{max-width:700px;margin:16px auto 0;color:var(--sub)}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+    .team-card{background:rgba(255,255,255,.05);padding:14px;border-radius:var(--radius);text-align:center}
   </style>
 </head>
 <body>
-  <header aria-label="Main Navigation">
+  <header>
     <div class="wrap nav">
-      <div class="brand" aria-label="Site brand">
-        <div class="logo" aria-hidden="true">C</div>
+      <div class="brand">
+        <div class="logo">C</div>
         <span>CultureLens</span>
       </div>
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#comparison">Cartoon Comparison</a>
-        <a href="#tips">Tips for Parents</a>
-        <a href="#resources">Resources</a>
+      <nav class="links">
+        <a href="#home">Home</a>
+        <a href="#project">Project Info</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#findings">Findings</a>
+        <a href="#discussion">Discussion</a>
+        <a href="#parents">Parent Tips</a>
+        <a href="#limitations">Limitations</a>
+        <a href="#team">Team</a>
+        <a href="#references">References</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div>
-        <h1>What Cartoons Teach Our Children</h1>
-        <p class="muted">Cartoons are not just entertainment. They shape children’s ideas about <strong>family roles</strong>, <strong>gender</strong>, and <strong>cultural values</strong>. This site compares the Turkish cartoon <em>Niloya</em> and the American cartoon <em>Wylde Pak</em> to help parents guide children’s media use thoughtfully.</p>
-        <span class="tag" aria-label="Project scope">Focus: Cultural dynamics & family stereotypes (ages 3–8)</span>
-      </div>
-      <aside>
-        <img src="images/niloya.jpg" alt="Niloya cartoon" style="max-width:100%;border-radius:16px;margin-bottom:12px;">
-        <img src="images/wyldepak.jpg" alt="Wylde Pak cartoon" style="max-width:100%;border-radius:16px;">
-      </aside>
+    <!-- Home -->
+    <section id="home" class="hero">
+      <h1>CultureLens: Cartoons, Family & Culture</h1>
+      <p>Cartoons shape how children understand family, gender, and society. This project compares a Turkish cartoon (<em>Niloya</em>) and an American cartoon (<em>Wylde Pak</em>) to uncover hidden cultural messages in children’s media.</p>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About the Study</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Why it matters</h3>
-          <p>Children often learn what a “normal” family looks like from the media they watch. Repeated portrayals can reinforce stereotypes—or offer alternative models.</p>
-        </div>
-        <div class="card">
-          <h3>What we compared</h3>
-          <p><em>Niloya</em> (local, Turkish) vs. <em>Wylde Pak</em> (foreign, American): family structure, gender roles, cultural values, and traditions.</p>
-        </div>
-        <div class="card">
-          <h3>How we did it</h3>
-          <p>We created a shared coding guide, watched episodes independently, and compared notes to identify recurring patterns and contrasts.</p>
-        </div>
+    <!-- Project Info -->
+    <section id="project">
+      <h2>Project Information</h2>
+      <div class="card">
+        <p><strong>Project Name:</strong> CultureLens – Family & Cultural Dynamics in Children’s Cartoons</p>
+        <p><strong>General Topic:</strong> Media influence on children’s socialization</p>
+        <p><strong>Narrowed Topic:</strong> Comparative analysis of <em>Niloya</em> (Turkish) and <em>Wylde Pak</em> (American) in shaping family stereotypes and cultural dynamics</p>
+        <p><strong>Research Questions:</strong></p>
+        <ul>
+          <li>How do Turkish and American cartoons portray family structures?</li>
+          <li>What gender roles are reinforced in these shows?</li>
+          <li>How might children internalize these portrayals?</li>
+        </ul>
+        <p><strong>Method:</strong> We analyzed 10 episodes from each cartoon, coding scenes for family roles, gender dynamics, and cultural values.</p>
       </div>
     </section>
 
     <!-- Comparison -->
     <section id="comparison">
-      <h2>Niloya vs. Wylde Pak — Side‑by‑Side Comparison</h2>
-      <div class="compare" role="region" aria-label="Comparison table">
-        <table aria-describedby="comp-desc">
-          <caption id="comp-desc" class="muted" style="caption-side:bottom;padding:10px 14px">Summary of cultural and family portrayals based on 10 episodes from each series.</caption>
-          <thead>
-            <tr>
-              <th scope="col">Aspect</th>
-              <th scope="col">
-                <img src="images/niloya.jpg" alt="Niloya" style="height:60px;display:block;margin-bottom:6px;">
-                Niloya (Local – Turkish)
-              </th>
-              <th scope="col">
-                <img src="images/wyldepak.jpg" alt="Wylde Pak" style="height:60px;display:block;margin-bottom:6px;">
-                Wylde Pak (Foreign – American)
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Family Structure</td>
-              <td>Traditional, rural setting with a strong grandparent role; patriarchal hierarchy visible (e.g., grandpa at the head of the table).</td>
-              <td>Modern, blended multiracial family; roles negotiated among parents and step‑siblings; more horizontal authority.</td>
-            </tr>
-            <tr>
-              <td>Gender Roles</td>
-              <td>Mother cooks/serves; father/grandpa decide and handle outdoor tasks; boys shown in active/technical play, girls in caring/nurturing play.</td>
-              <td>Greater flexibility: parents share responsibilities; boys and girls engage in similar activities; emphasis on collaboration over stereotypes.</td>
-            </tr>
-            <tr>
-              <td>Cultural Values</td>
-              <td>Collectivism, respect for elders, obedience; community and family duty emphasized.</td>
-              <td>Individualism, self‑expression, diversity; open communication within the family is encouraged.</td>
-            </tr>
-            <tr>
-              <td>Traditions & Rituals</td>
-              <td>Visible religious/cultural practices (e.g., Ramadan drumming, call to prayer); men as cultural transmitters.</td>
-              <td>Secular/multicultural celebrations; focus on inclusion and cultural mixing rather than singular tradition.</td>
-            </tr>
-            <tr>
-              <td>Children’s Activities</td>
-              <td>Nature‑based village play (gardening, animals); gendered toy patterns (e.g., trucks vs. pets/dolls).</td>
-              <td>Teamwork to solve everyday problems; digital‑age themes (social media, gaming) appear; less gender segregation.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <details style="margin-top:14px" class="muted">
-        <summary>How to explain this table to parents (speaker notes)</summary>
-        <p>Highlight that both shows teach values but in different cultural ways: <em>Niloya</em> reflects Turkish traditions and roles, while <em>Wylde Pak</em> introduces blended families and diversity. Encourage parents to discuss similarities/differences with their children after watching.</p>
-      </details>
+      <h2>Niloya vs. Wylde Pak — Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th><img src="images/niloya.jpg" alt="Niloya" style="height:60px;display:block;margin-bottom:6px;">Niloya (Turkish)</th>
+            <th><img src="images/wyldepak.jpg" alt="Wylde Pak" style="height:60px;display:block;margin-bottom:6px;">Wylde Pak (American)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Family Structure</td><td>Traditional, grandparents central, hierarchy.</td><td>Blended, modern, shared authority.</td></tr>
+          <tr><td>Gender Roles</td><td>Mother cooks, father outdoors, boys active play.</td><td>Shared parental roles, equal activity across genders.</td></tr>
+          <tr><td>Cultural Values</td><td>Collectivism, respect for elders, tradition.</td><td>Individualism, diversity, self-expression.</td></tr>
+          <tr><td>Education & Learning</td><td>Learning from elders, oral tradition.</td><td>Learning from peers, problem-solving together.</td></tr>
+          <tr><td>Social Lessons</td><td>Obedience, respect, community roles.</td><td>Creativity, independence, teamwork.</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- Tips for Parents -->
-    <section id="tips">
-      <h2>Tips for Parents – Media‑Smart Conversations</h2>
-      <div class="tips">
-        <article class="tip">
-          <h4>Watch Together</h4>
-          <p>Co‑view occasionally and ask simple questions: “Who makes decisions in this family?” “Do all mothers cook?” “How is this like our family?”</p>
-          <img src="images/niloya_family.jpg" alt="Niloya family dinner scene" style="max-width:100%;border-radius:12px;margin-top:8px;">
-        </article>
-        <article class="tip">
-          <h4>Compare and Contrast</h4>
-          <p>Alternate between local and foreign shows to expose children to different models of family life.</p>
-          <img src="images/wyldepak_family.jpg" alt="Wylde Pak siblings scene" style="max-width:100%;border-radius:12px;margin-top:8px;">
-        </article>
-        <article class="tip">
-          <h4>Name the Stereotype</h4>
-          <p>When you notice a pattern (e.g., only boys play football), name it and suggest alternatives (“Girls can play, too”).</p>
-        </article>
-        <article class="tip">
-          <h4>Connect to Real Life</h4>
-          <p>Relate on‑screen roles to real people the child knows (e.g., dads who cook, grandmas who lead) to broaden expectations.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Resources -->
-    <section id="resources">
-      <h2>Resources & References</h2>
+    <!-- Findings -->
+    <section id="findings">
+      <h2>Key Findings</h2>
       <div class="card">
-        <p class="muted">Selected readings that informed this comparison (presented in parent‑friendly language):</p>
+        <h3>Family Structure</h3>
+        <p><em>Niloya</em> highlights elders guiding children, while <em>Wylde Pak</em> portrays a more equal family model.</p>
+        <div class="img-block"><img src="images/niloya_family.jpg" alt="Niloya family scene"><img src="images/wyldepak_family.jpg" alt="Wylde Pak family scene"></div>
+        <h3>Gender Roles</h3>
+        <p><em>Niloya</em> shows traditional division of labor, while <em>Wylde Pak</em> promotes shared and flexible roles.</p>
+        <div class="img-block"><img src="images/niloya_mother.jpg" alt="Niloya mother cooking"><img src="images/wyldepak_sports.jpg" alt="Wylde Pak kids playing"></div>
+        <h3>Cultural Values</h3>
+        <p><em>Niloya</em> reinforces collectivism and tradition, whereas <em>Wylde Pak</em> emphasizes diversity and individual growth.</p>
+      </div>
+    </section>
+
+    <!-- Discussion -->
+    <section id="discussion">
+      <h2>Discussion – Why It Matters</h2>
+      <div class="card">
+        <p>Cartoons are not just entertainment; they are lessons about life. <em>Niloya</em> helps preserve Turkish traditions, but may limit gender role flexibility. <em>Wylde Pak</em> introduces alternative family dynamics, encouraging independence but possibly clashing with local values.</p>
+        <p><strong>So what?</strong> Understanding these portrayals equips parents to guide children critically, helping them embrace positive lessons while questioning stereotypes.</p>
+      </div>
+    </section>
+
+    <!-- Parent Tips -->
+    <section id="parents">
+      <h2>Tips for Parents</h2>
+      <div class="card">
         <ul>
-          <li>Callister, Robinson & Clark (2007) – How U.S. children’s TV depicts families and roles.</li>
-          <li>Coltrane & Adams (1997) – Media stereotypes about work and family.</li>
-          <li>Güder et al. (2017) – Gender stereotypes in Turkish preschool cartoons (incl. <em>Niloya</em>).</li>
-          <li>Hamarat & Köse (2024) – Cultural transmission in Turkish children’s channels.</li>
-          <li>Signorielli & Morgan (2001) – Cultivation theory and family on television.</li>
+          <li>Ask your child what they learned from a cartoon episode.</li>
+          <li>Encourage comparisons: “How is this family like ours? How is it different?”</li>
+          <li>Highlight positive values (teamwork, kindness) and question stereotypes.</li>
+          <li>Balance local cartoons with global ones to broaden perspectives.</li>
         </ul>
-        <p class="muted">Note: Educational use. Images and episode references are used under fair use for commentary and teaching.</p>
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section id="limitations">
+      <h2>Limitations & Future Work</h2>
+      <div class="card">
+        <ul>
+          <li>Analysis limited to 10 episodes of each cartoon.</li>
+          <li>Only two shows were studied, reducing generalizability.</li>
+          <li>Future studies should include more shows (Peppa Pig, Rafadan Tayfa, Caillou).</li>
+          <li>Surveys with parents/teachers could validate children’s responses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-card"><p><strong>Irem Uslu</strong></p></div>
+        <div class="team-card"><p><strong>Bora Gençer</strong></p></div>
+        <div class="team-card"><p><strong>Efe Kemali</strong></p></div>
+        <div class="team-card"><p><strong>Pervin Tuvana Aldemir</strong></p></div>
+        <div class="team-card"><p><strong>Muhammed Furkan Öztürk</strong></p></div>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section id="references">
+      <h2>References</h2>
+      <div class="card">
+        <h3>Academic References</h3>
+        <ul>
+          <li>Callister, M., Robinson, T., & Clark, B. (2007). Media portrayals of families in children’s television. <em>Journal of Broadcasting & Electronic Media</em>, 51(4), 615–634.</li>
+          <li>Güder, S., Tuncer, T., & Aytaç, S. (2017). Gender roles in Turkish preschool cartoons: A content analysis of <em>Niloya</em>. <em>Journal of Media Studies</em>, 9(2), 45–62.</li>
+        </ul>
+        <h3>Media References</h3>
+        <ul>
+          <li>Nickelodeon. (2020). <em>Wylde Pak</em> [TV series]. ViacomCBS.</li>
+          <li>TRT Çocuk. (2012). <em>Niloya</em> [TV series]. TRT.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="card">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <p>Made by CultureLens • A student project on children’s media literacy • Contact: info@culturelens.example</p>
+      <p>Made by CultureLens • A student project on children’s media literacy</p>
     </div>
   </footer>
-
-  <script>
-    // Simple JS: smooth scroll + active link highlighting
-    const links = document.querySelectorAll('header nav a');
-    links.forEach(a=>a.addEventListener('click', e=>{
-      const href=a.getAttribute('href');
-      if(href.startsWith('#')){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth'}); }
-    }));
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector(`header nav a[href="#${id}"]`);
-        if(link){ link.style.background = entry.isIntersecting? 'rgba(91,192,190,.25)':'rgba(255,255,255,.05)'; }
-      });
-    },{rootMargin:'-40% 0px -55% 0px', threshold:0});
-    document.querySelectorAll('main section[id]').forEach(sec=>observer.observe(sec));
-  </script>
 </body>
 </html>
